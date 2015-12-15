@@ -69,7 +69,7 @@ public class SlateView extends View {
     public void saveCanvas(View view) throws FileNotFoundException {
         Date date = new Date();
         File saveFolder = new File(Config.SAVE_LOCATION);
-        File file = new File(Config.SAVE_LOCATION + date.toString() + File.separator + ".jpg");
+        File file = new File(Config.SAVE_LOCATION + File.separator + date.toString() + ".jpg");
         if (!saveFolder.exists())
             saveFolder.mkdir();
         getDrawingCache().compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(file));
